@@ -1,0 +1,36 @@
+{
+  // Setup snippets
+
+  "Setup NativeBase v3 Provider": {
+    "prefix": "nb-provider",
+    "body": ["<NativeBaseProvider $1>$2</NativeBaseProvider>$3"],
+    "description": "Log output to console"
+  },
+
+  // Primary Component snippets
+
+  "Box component : NativeBase v3": {
+    "prefix": "nb-box",
+    "body": "<Box $1>$2$TM_SELECTED_TEXT</Box>$3"
+  },
+
+  // Composite Component snippets
+
+  "Modal component : NativeBase v3": {
+    "prefix": "nb-modal",
+    "body": [
+      "<Modal $1>",
+      "<Modal.Content $2>",
+      "${3:<Modal.CloseButton />}",
+      "<Modal.Header $4>$5</Modal.Header>",
+      "<Modal.Body $6>",
+      "$7",
+      "</Modal.Body>",
+      "<Modal.Footer $8>",
+      "$9",
+      "</Modal.Footer>",
+      "</Modal.Content>",
+      "</Modal>"
+    ]
+  }
+}
