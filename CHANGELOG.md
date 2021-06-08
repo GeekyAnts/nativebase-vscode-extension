@@ -41,3 +41,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Snippet for Image
 - Snippet for Menu
 - Snippet for Alert
+- Snippet for ActionSheet
+- Snippet for Slide
+- Snippet for Tooltip
+- Snippet for Popover
+- Snippet for Stagger
+- Snippet for FAB
+- Snippet for Toast
+- Snippet for Spinner
+- Snippet for Progress
