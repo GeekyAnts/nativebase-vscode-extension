@@ -98,21 +98,20 @@
         "description": "ZStack component: NativeBase v3"
   },
   //Image
-  "Image component: NativeBase v3": {
+"Image component: NativeBase v3": {
   "prefix": "nb-Image",
   "body": [
     "<Image",
-    "  source={{",
-    "    uri:\"$1\"",
+    "  src={{",
+    "    uri:\"${1:https://wallpaperaccess.com/full/317501.jpg}\"",
     "  }}",
-    "  alt=\"${2:Alternate Text}\"",
-    "  size={\"${3:xl}\"}",
-    "  $4",
-    ">",
+    "  size={${2|xs,sm,md,lg,xl,2xl|}}",
+    "  $3",
+    "/>",
     "$0"
   ],
   "description": "Image component: NativeBase v3"
-  },
+},
   //RadioGroup
   "RadioGroup component: NativeBase v3": {
     "prefix": "nb-RadioGroup",
@@ -269,16 +268,19 @@
         "description": "Link component: NativeBase v3"
   },
   //icon-button
-  "IconButton component: NativeBase v3": {
-    "prefix": "nb-icon-button",
-      "body": [
-        "<IconButton",
-        "  $1",
-        "/>",
-        ""
-      ],
-        "description": "IconButton component: NativeBase v3"
-  },
+"IconButton component: NativeBase v3": {
+  "prefix": "nb-IconButton",
+  "body": [
+    "<IconButton",
+    "  variant=\"${1|solid,outline,ghost,outline,unstyled|}\"",
+    "  icon={$2}",
+    "  $3",
+    "/>",
+    "$0",
+    ""
+  ],
+  "description": "IconButton component: NativeBase v3"
+},
   //input
   "Input component: NativeBase v3": {
     "prefix": "nb-input",
@@ -366,8 +368,9 @@
   "prefix": "nb-Avatar",
   "body": [
     "<Avatar",
-    "  source={{",
-    "    uri:\"$1\"",
+    "  src={{",
+    "    uri:\"${1:https://wallpaperaccess.com/full/317501.jpg}\"",
+    "  }}",
     "  $2",
     "/>",
     "$0"
@@ -396,6 +399,8 @@
   },
 
   // Composite Component snippets
+
+  //Modal
   "Modal component : NativeBase v3": {
     "prefix": "nb-modal",
     "body": [
@@ -414,13 +419,14 @@
        "$0",
     ]
   },
+  //Popover
   "Popover component: NativeBase v3": {
-    "prefix": "nb-popover",
+    "prefix": "nb-Popover",
     "body": [
       "<Popover",
       " trigger={(triggerProps) => {",
       " return $1",
-      " }}"
+      " }}",
       " $2",
       ">",
       "  <Popover.Content $3>",
@@ -462,23 +468,30 @@
       ],
         "description": "ListItem component: NativeBase v3"
   },
+  //ActionSheet
   "ActionSheet component: NativeBase v3": {
     "prefix": "nb-Actionsheet",
     "body": [
       "<ActionSheet isOpen={${1:isOpen}} isClose={${2:isClose}}",
-      "$3",
+      "\t$3",
       ">",
       "\t<ActionSheetContent $4>",
-      "\t\t<ActionSheet.Item $5>$6</ActionSheet>",
-      "\t\t<ActionSheet.Item $7>$8</ActionSheet>",
-      "\t\t<ActionSheet.Item $9>$10</ActionSheet>",
-      "\t\t$11",
+      "\t\t$5",
       "\t</ActionSheetContent>",
       "</ActionSheet>",
        "$0",
     ],
     "description": "ActionSheet component: NativeBase v3"
   },
+  "ActionSheetItem component: NativeBase v3": {
+  "prefix": "nb-ActionSheetItem",
+  "body": [
+    "<ActionSheet.Item $1>$2</ActionSheet.Item>",
+    "$0"
+  ],
+  "description": "ActionSheetItem component: NativeBase v3"
+},
+  //Alert component
   "Alert component: NativeBase v3": {
     "prefix": "nb-Alert",
       "body": [
@@ -488,8 +501,110 @@
         "\t<Alert.Description $5>$6</Alert.Description>",
         "</Alert>",
         "$0",
-        ""
       ],
         "description": "Alert component: NativeBase v3"
   },
+
+  //FormControl
+  "FormControl component: NativeBase v3": {
+  "prefix": "nb-FormControl",
+  "body": [
+    "<FormControl $1>",
+    "  $2",
+    "</FormControl>"
+  ],
+  "description": "FormControl component: NativeBase v3"
+  },
+
+  //FormControl.Label
+  "FormControl.Label component: NativeBase v3": {
+  "prefix": "nb-FormControl.Label",
+  "body": [
+    "<FormControl.Label $1>$2</FormControl.Label>"
+     "$0",
+  ],
+  "description": "FormControl.Label component: NativeBase v3"
+  },
+
+
+  // FormControl.HelperText
+  "FormControl.HelperText component: NativeBase v3": {
+  "prefix": "nb-FormControl.HelperText",
+  "body": [
+    "<FormControl.HelperText $1>$2</FormControl.HelperText>"
+    "$0",
+  ],
+  "description": "FormControl.HelperText component: NativeBase v3"
+  },
+
+
+  // FormControl.ErrorMessage
+"FormControl.ErrorMessage component: NativeBase v3": {
+  "prefix": "nb-FormControl.ErrorMessage",
+  "body": [
+    "<FormControl.ErrorMessage $1>$2</FormControl.ErrorMessage>",
+    "$0"
+  ],
+  "description": "FormControl.ErrorMessage component: NativeBase v3"
+},
+
+  //fab
+ "Fab component: NativeBase v3": {
+  "prefix": "nb-Fab",
+  "body": [
+    "<Fab",
+    "  ${1:label={",
+    "    <Text $2>",
+    "      ${3:Hello}",
+    "    </Text>",
+    "  }",
+    "  }",
+    "  $4",
+    "/>",
+    "$0"
+  ],
+  "description": "Fab component: NativeBase v3"
+}
+
+
+  //Slide
+  "Slide component: NativeBase v3": {
+  "prefix": "nb-Slide",
+  "body": [
+    "<Slide in={${2|true,false|}} $3>",
+    "  $4",
+    "</Slide>",
+    "$0"
+  ],
+  "description": "Slide component: NativeBase v3"
+  },
+
+  //tooltip
+ "Tooltip component: NativeBase v3": {
+  "prefix": "nb-Tooltip",
+  "body": [
+    "<Tooltip",
+    " label=\"${1:Hello there!}\"",
+    " $3",
+    ">",
+    " $4",
+    "</Tooltip>",
+    "$0",
+  ],
+  "description": "Tooltip component: NativeBase v3"
+  },
+ 
+ //stagger
+ "Stagger component: NativeBase v3": {
+  "prefix": "nb-Stagger",
+  "body": [
+    "<Stagger",
+    "  visible={$1}",
+    "  $2",
+    ">",
+    "</Stagger>",
+    "$0"
+  ],
+  "description": "Stagger component: NativeBase v3"
+},
 }
