@@ -12,411 +12,290 @@
   //Box
   "Box component: NativeBase v3": {
     "prefix": "nb-Box",
-      "body": [
-        "<Box $1>",
-        "  $2",
-        "</Box>",
-        "$0"
-      ],
-        "description": "Box component: NativeBase v3"
+    "body": ["<Box $1>", "\t$2", "</Box>", "$0"],
+    "description": "Box component: NativeBase v3"
+  },
+  "View component: NativeBase v3": {
+    "prefix": "nb-View",
+    "body": ["<View $1>", "\t$2", "</View>", "$0"],
+    "description": "View component: NativeBase v3"
   },
   //Center
   "Center component: NativeBase v3": {
     "prefix": "nb-Center",
-      "body": [
-        "<Center $1>",
-        "  $2",
-        "</Center>",
-        "$0"
-      ],
-        "description": "Center component: NativeBase v3"
+    "body": ["<Center $1>", "\t$2", "</Center>", "$0"],
+    "description": "Center component: NativeBase v3"
   },
   //Container
   "Container component: NativeBase v3": {
     "prefix": "nb-Container",
-      "body": [
-        "<Container $1>",
-        "  $2",
-        "</Container>",
-        "$0"
-      ],
-        "description": "Container component: NativeBase v3"
+    "body": ["<Container $1>", "\t$2", "</Container>", "$0"],
+    "description": "Container component: NativeBase v3"
   },
   //Flex
   "Flex component: NativeBase v3": {
     "prefix": "nb-Flex",
-      "body": [
-        "<Flex $1>",
-        "  $2",
-        "</Flex>",
-        "$0"
-      ],
-        "description": "Flex component: NativeBase v3"
+    "body": ["<Flex $1>", "\t$2", "</Flex>", "$0"],
+    "description": "Flex component: NativeBase v3"
   },
   //HStack
   "HStack component: NativeBase v3": {
     "prefix": "nb-HStack",
-      "body": [
-        "<HStack $1>",
-        "  $2",
-        "</HStack>",
-        "$0"
-      ],
-        "description": "HStack component: NativeBase v3"
+    "body": ["<HStack $1>", "\t$2", "</HStack>", "$0"],
+    "description": "HStack component: NativeBase v3"
   },
   //Stack
   "Stack component: NativeBase v3": {
     "prefix": "nb-Stack",
-      "body": [
-        "<Stack $1>",
-        "  $2",
-        "</Stack>",
-        "$0"
-      ],
-        "description": "Stack component: NativeBase v3"
+    "body": ["<Stack $1>", "\t$2", "</Stack>", "$0"],
+    "description": "Stack component: NativeBase v3"
   },
   //VStack
   "VStack component: NativeBase v3": {
     "prefix": "nb-VStack",
-      "body": [
-        "<VStack $1>",
-        "  $2",
-        "</VStack>",
-        "$0"
-      ],
-        "description": "VStack component: NativeBase v3"
+    "body": ["<VStack $1>", "\t$2", "</VStack>", "$0"],
+    "description": "VStack component: NativeBase v3"
   },
   //ZStack
   "ZStack component: NativeBase v3": {
     "prefix": "nb-ZStack",
-      "body": [
-        "<ZStack $1>",
-        "  $2",
-        "</ZStack>",
-        "$0"
-      ],
-        "description": "ZStack component: NativeBase v3"
+    "body": ["<ZStack $1>", "\t$2", "</ZStack>", "$0"],
+    "description": "ZStack component: NativeBase v3"
   },
   //Image
-"Image component: NativeBase v3": {
-  "prefix": "nb-Image",
-  "body": [
-    "<Image",
-    "  src={{",
-    "    uri:\"${1:https://wallpaperaccess.com/full/317501.jpg}\"",
-    "  }}",
-    "  size={${2|xs,sm,md,lg,xl,2xl|}}",
-    "  $3",
-    "/>",
-    "$0"
-  ],
-  "description": "Image component: NativeBase v3"
-},
+  "Image component: NativeBase v3": {
+    "prefix": "nb-Image",
+    "body": [
+      "<Image",
+      "\tsrc={{",
+      "\t\turi:\"${1:https://wallpaperaccess.com/full/317501.jpg}\"",
+      "\t}}",
+      "\tsize={${2|xs,sm,md,lg,xl,2xl|}}",
+      "\t$3",
+      "/>",
+      "$0"
+    ],
+    "description": "Image component: NativeBase v3"
+  },
   //RadioGroup
   "RadioGroup component: NativeBase v3": {
     "prefix": "nb-RadioGroup",
-      "body": [
-        "<Radio.Group $1>",
-        "\t$2",
-        "</Radio.Group>",
-        "$0"
-      ],
-        "description": "RadioGroup component: NativeBase v3"
+    "body": ["<Radio.Group $1>", "\t$2", "</Radio.Group>", "$0"],
+    "description": "RadioGroup component: NativeBase v3"
   },
   //RadioItem
   "Radio component: NativeBase v3": {
     "prefix": "nb-RadioItem",
-      "body": [
-        "<Radio $1>$2</Radio>",
-        "$0"
-      ],
-        "description": "Radio component: NativeBase v3"
+    "body": ["<Radio $1>$2</Radio>", "$0"],
+    "description": "Radio component: NativeBase v3"
   },
   //Select Component
   "Select component: NativeBase v3": {
     "prefix": "nb-Select",
-      "body": [
-        "<Select $1>",
-        "\t$2",
-        "</Select>",
-        "$0"
-      ],
-        "description": "Select component: NativeBase v3"
+    "body": ["<Select $1>", "\t$2", "</Select>", "$0"],
+    "description": "Select component: NativeBase v3"
   },
   //SelectItem
   "Select.Item component: NativeBase v3": {
     "prefix": "nb-SelectItem",
-      "body": [
-        "<Select.Item $1>$2</Select.Item>",
-        "$0"
-      ],
-        "description": "SelectItem component: NativeBase v3"
+    "body": ["<Select.Item $1>$2</Select.Item>", "$0"],
+    "description": "SelectItem component: NativeBase v3"
   },
   //Switch
   "Switch component: NativeBase v3": {
     "prefix": "nb-Switch",
-      "body": [
-        "<Switch $1/>",
-        "$0"
-      ],
-        "description": "Switch component: NativeBase v3"
+    "body": ["<Switch $1/>", "$0"],
+    "description": "Switch component: NativeBase v3"
   },
   //Text
   "Text component: NativeBase v3": {
     "prefix": "nb-Text",
-      "body": [
-        "<Text $1>$2</Text>",
-        "$0"
-      ],
-        "description": "Text component: NativeBase v3"
+    "body": ["<Text $1>$2</Text>", "$0"],
+    "description": "Text component: NativeBase v3"
   },
   //Heading
   "Heading component: NativeBase v3": {
     "prefix": "nb-Heading",
-      "body": [
-        "<Heading $1>$2</Heading>",
-        "$0"
-      ],
-        "description": "Heading component: NativeBase v3"
+    "body": ["<Heading $1>$2</Heading>", "$0"],
+    "description": "Heading component: NativeBase v3"
   },
   //Button-group
   "ButtonGroup component: NativeBase v3": {
     "prefix": "nb-ButtonGroup",
-      "body": [
-        "<Button.Group $1>",
-        "  $2",
-        "</Button.Group>",
-        "$0"
-      ],
-        "description": "Button component: NativeBase v3"
+    "body": ["<Button.Group $1>", "\t$2", "</Button.Group>", "$0"],
+    "description": "Button component: NativeBase v3"
   },
   //button
   "Button component: NativeBase v3": {
-    "prefix": "nb-button",
-      "body": [
-        "<Button $1>",
-        "  $2",
-        "</Button>",
-        "$0"
-      ],
-        "description": "Button component: NativeBase v3"
+    "prefix": "nb-Button",
+    "body": ["<Button $1>", "\t$2", "</Button>", "$0"],
+    "description": "Button component: NativeBase v3"
   },
   //pressable
   "Pressable component: NativeBase v3": {
-    "prefix": "nb-pressable",
-      "body": [
-        "<Pressable $1>",
-        "  $2",
-        "</Pressable>",
-        "$0"
-      ],
-        "description": "Pressable component: NativeBase v3"
+    "prefix": "nb-Pressable",
+    "body": ["<Pressable $1>", "\t$2", "</Pressable>", "$0"],
+    "description": "Pressable component: NativeBase v3"
   },
   //Checkbox-group
   "CheckboxGroup component: NativeBase v3": {
-    "prefix": "nb-checkbox-group",
-      "body": [
-        "<Checkbox.Group $1>",
-        "  $2",
-        "</Checkbox.Group>",
-        "$0"
-      ],
-        "description": "Checkbox component: NativeBase v3"
+    "prefix": "nb-CheckboxGroup",
+    "body": ["<Checkbox.Group $1>", "\t$2", "</Checkbox.Group>", "$0"],
+    "description": "Checkbox component: NativeBase v3"
   },
   //checkbox
   "Checkbox component: NativeBase v3": {
-    "prefix": "nb-checkbox",
-      "body": [
-        "<Checkbox $1>",
-        "  $2",
-        "</Checkbox>",
-        "$0"
-      ],
-        "description": "Checkbox component: NativeBase v3"
+    "prefix": "nb-Checkbox",
+    "body": ["<Checkbox $1>", "\t$2", "</Checkbox>", "$0"],
+    "description": "Checkbox component: NativeBase v3"
   },
-  //slider
+  //Slider
   "Slider component: NativeBase v3": {
-    "prefix": "nb-slider",
-      "body": [
-        "<Slider $1>",
-        "  <Slider.Track $2>",
-        "    <Slider.FilledTrack $3 />",
-        "  </Slider.Track>",
-        "  <Slider.Thumb $4 />",
-        "  $5",
-        "</Slider>",
-        "$0"
-      ],
-        "description": "Slider component: NativeBase v3"
+    "prefix": "nb-Slider",
+    "body": [
+      "<Slider $1>",
+      "\t<Slider.Track $2>",
+      "\t\t<Slider.FilledTrack $3 />",
+      "\t</Slider.Track>",
+      "\t<Slider.Thumb $4 />",
+      "\t$5",
+      "</Slider>",
+      "$0"
+    ],
+    "description": "Slider component: NativeBase v3"
   },
   //text-area
   "TextArea component: NativeBase v3": {
-    "prefix": "nb-text-area",
-      "body": [
-        "<TextArea $1/>",
-        "$0"
-      ],
-        "description": "TextArea component: NativeBase v3"
+    "prefix": "nb-TextArea",
+    "body": ["<TextArea $1/>", "$0"],
+    "description": "TextArea component: NativeBase v3"
   },
   //link
   "Link component: NativeBase v3": {
-    "prefix": "nb-link",
-      "body": [
-        "<Link $1>$2</Link>",
-        "$0"
-      ],
-        "description": "Link component: NativeBase v3"
+    "prefix": "nb-Link",
+    "body": ["<Link $1>$2</Link>", "$0"],
+    "description": "Link component: NativeBase v3"
   },
   //icon-button
-"IconButton component: NativeBase v3": {
-  "prefix": "nb-IconButton",
-  "body": [
-    "<IconButton",
-    "  variant=\"${1|solid,outline,ghost,outline,unstyled|}\"",
-    "  icon={$2}",
-    "  $3",
-    "/>",
-    "$0",
-    ""
-  ],
-  "description": "IconButton component: NativeBase v3"
-},
-  //input
+  "IconButton component: NativeBase v3": {
+    "prefix": "nb-IconButton",
+    "body": [
+      "<IconButton",
+      "\tvariant=\"${1|solid,outline,ghost,outline,unstyled|}\"",
+      "\ticon={$2}",
+      "\t$3",
+      "/>",
+      "$0",
+      ""
+    ],
+    "description": "IconButton component: NativeBase v3"
+  },
+  //Input
   "Input component: NativeBase v3": {
-    "prefix": "nb-input",
-      "body": [
-        "<Input $1 />",
-        "$0"
-      ],
-        "description": "Input component: NativeBase v3"
+    "prefix": "nb-Input",
+    "body": ["<Input $1 />", "$0"],
+    "description": "Input component: NativeBase v3"
   },
-  //badge
+  //Badge
   "Badge component: NativeBase v3": {
-    "prefix": "nb-badge",
-      "body": [
-        "<Badge $1>$2</Badge>",
-        "$0"
-      ],
-        "description": "Badge component: NativeBase v3"
+    "prefix": "nb-Badge",
+    "body": ["<Badge $1>$2</Badge>", "$0"],
+    "description": "Badge component: NativeBase v3"
   },
-  //divider
+  //Divider
   "Divider component: NativeBase v3": {
-    "prefix": "nb-divider",
-      "body": [
-        "<Divider $1/>",
-        "$0"
-      ],
-        "description": "Divider component: NativeBase v3"
+    "prefix": "nb-Divider",
+    "body": ["<Divider $1/>", "$0"],
+    "description": "Divider component: NativeBase v3"
   },
-  //list
+  //List
   "List component: NativeBase v3": {
     "prefix": "nb-List",
-      "body": [
-        "<List $1>",
-        "\t$2",
-        "</List>",
-        "$0"
-      ],
-        "description": "List component: NativeBase v3"
+    "body": ["<List $1>", "\t$2", "</List>", "$0"],
+    "description": "List component: NativeBase v3"
   },
-  //list-item
+  //ListItem
   "ListItem component: NativeBase v3": {
-    "prefix": "nb-list-item",
-      "body": [
-        "<List.Item $1>$2</List.Item>",
-        "$0"
-      ],
-        "description": "ListItem component: NativeBase v3"
+    "prefix": "nb-ListItem",
+    "body": ["<List.Item $1>$2</List.Item>", "$0"],
+    "description": "ListItem component: NativeBase v3"
   },
-  //progress
+  //Progress
   "Progress component: NativeBase v3": {
-    "prefix": "nb-progress",
-      "body": [
-        "<Progress $1/>",
-        "$0"
-      ],
-        "description": "Progress component: NativeBase v3"
+    "prefix": "nb-Progress",
+    "body": ["<Progress $1/>", "$0"],
+    "description": "Progress component: NativeBase v3"
   },
-  //spinner
+  //Spinner
   "Spinner component: NativeBase v3": {
-    "prefix": "nb-spinner",
-      "body": [
-        "<Spinner $1/>",
-        "$0"
-      ],
-        "description": "Spinner component: NativeBase v3"
+    "prefix": "nb-Spinner",
+    "body": ["<Spinner $1/>", "$0"],
+    "description": "Spinner component: NativeBase v3"
   },
-  //toast
+  //Toast
   "Toast component: NativeBase v3": {
-    "prefix": "nb-toast",
-      "body": [
-        "toast.show({$1})",
-        "$0"
-      ],
-        "description": "Toast component: NativeBase v3"
+    "prefix": "nb-Toast",
+    "body": [
+      "toast.show({",
+      "\ttitle:${1:'Hello World!'},",
+      "\t$2",
+      "})",
+      "$0",
+      ""
+    ],
+    "description": "Toast component: NativeBase v3"
   },
   "Icon component: NativeBase v3": {
     "prefix": "nb-Icon",
-      "body": [
-        "<Icon as=\"$1\" name=\"$2\" $3 />",
-        "$0"
-      ],
-        "description": "Icon component: NativeBase v3"
+    "body": ["<Icon as=\"$1\" name=\"$2\" $3 />", "$0"],
+    "description": "Icon component: NativeBase v3"
   },
-  //avatar
- "Avatar component: NativeBase v3": {
-  "prefix": "nb-Avatar",
-  "body": [
-    "<Avatar",
-    "  src={{",
-    "    uri:\"${1:https://wallpaperaccess.com/full/317501.jpg}\"",
-    "  }}",
-    "  $2",
-    "/>",
-    "$0"
-  ],
-  "description": "Avatar component: NativeBase v3"
+  //Avatar
+  "Avatar component: NativeBase v3": {
+    "prefix": "nb-Avatar",
+    "body": [
+      "<Avatar",
+      "\tsrc={{",
+      "\t\turi:\"${1:https://wallpaperaccess.com/full/317501.jpg}\"",
+      "\t}}",
+      "\t$2",
+      "/>",
+      "$0"
+    ],
+    "description": "Avatar component: NativeBase v3"
   },
-   //AvatarBadge
+  //AvatarBadge
   "AvatarBadege component: NativeBase v3": {
-  "prefix": "nb-AvatarBadge",
-  "body": [
-    "<Avatar.Badge $1 />",
-    "$0"
-  ],
-  "description": "AvatarBadege component: NativeBase v3"
-},
- //Avatar group
+    "prefix": "nb-AvatarBadge",
+    "body": ["<Avatar.Badge $1 />", "$0"],
+    "description": "AvatarBadege component: NativeBase v3"
+  },
+  //Avatar group
   "AvatarGoup component: NativeBase v3": {
     "prefix": "nb-AvatarGroup",
-      "body": [
-        "<Avatar.Goup $1>",
-        "\t$2",
-        "</Avatar.Goup>",
-        "$0"
-      ],
-        "description": "AvatarGoup component: NativeBase v3"
+    "body": ["<Avatar.Goup $1>", "\t$2", "</Avatar.Goup>", "$0"],
+    "description": "AvatarGoup component: NativeBase v3"
   },
 
   // Composite Component snippets
 
   //Modal
   "Modal component : NativeBase v3": {
-    "prefix": "nb-modal",
+    "prefix": "nb-Modal",
     "body": [
       "<Modal $1>",
-      "<Modal.Content $2>",
-      "${3:<Modal.CloseButton />}",
-      "<Modal.Header $4>$5</Modal.Header>",
-      "<Modal.Body $6>",
-      "$7",
-      "</Modal.Body>",
-      "<Modal.Footer $8>",
-      "$9",
-      "</Modal.Footer>",
-      "</Modal.Content>",
+      "\t<Modal.Content $2>",
+      "\t\t${3:<Modal.CloseButton $4 />}",
+      "\t\t<Modal.Header $5>$6</Modal.Header>",
+      "\t\t<Modal.Body $7>",
+      "\t$8",
+      "\t\t</Modal.Body>",
+      "\t\t<Modal.Footer $9>",
+      "\t$10",
+      "\t\t</Modal.Footer>",
+      "\t</Modal.Content>",
       "</Modal>",
-       "$0",
+      "$0"
     ]
   },
   //Popover
@@ -424,49 +303,50 @@
     "prefix": "nb-Popover",
     "body": [
       "<Popover",
-      " trigger={(triggerProps) => {",
-      " return $1",
-      " }}",
-      " $2",
+      "\ttrigger={(triggerProps) => {",
+      "\treturn ${1:<Button {...triggerProps\\} $2>${3:Trigger}</Button>}",
+      "\t}}",
+      "\t$4",
       ">",
-      "  <Popover.Content $3>",
-      "    <Popover.Header $4>",
-      "      $5",
-      "    </Popover.Header>",
-      "    <Popover.Body $6>",
-      "      $7",
-      "    </Popover.Body>",
-      "    <Popover.Footer $8>",
-      "      $9",
-      "    </Popover.Footer $10>",
-      "  </Popover.Content>",
+      "\t<Popover.Content $5>",
+      "\t\t${6:<Popover.Arrow $7 />}",
+      "\t\t${8:<Popover.CloseButton $9 />}",
+      "\t\t<Popover.Header $10>",
+      "\t\t\t$11",
+      "\t\t</Popover.Header>",
+      "\t\t<Popover.Body $12>",
+      "\t\t\t$13",
+      "\t\t</Popover.Body>",
+      "\t\t<Popover.Footer $14>",
+      "\t\t\t$15",
+      "\t\t</Popover.Footer $16>",
+      "\t</Popover.Content>",
       "</Popover>",
-      "$0",
+      "$0"
     ],
     "description": "Popover component: NativeBase v3"
   },
-   //Menu
+  //Menu
   "Menu component: NativeBase v3": {
     "prefix": "nb-Menu",
-      "body": [
-        "<Menu>",
-        " trigger={(triggerProps) => {",
-        " return $1",
-        " }}"
-        " $2",
-        "</Menu>",
-        "$0"
-      ],
-        "description": "Menu component: NativeBase v3"
+    "body": [
+      "<Menu",
+      "\ttrigger={(triggerProps) => {",
+      "\treturn ${1:<Button {...triggerProps\\} $2>${3:Trigger}</Button>}",
+      "\t}}",
+      "\t$4",
+      ">",
+      "\t$5",
+      "</Menu>",
+      "$0"
+    ],
+    "description": "Menu component: NativeBase v3"
   },
   //MenuItem
   "MenuItem component: NativeBase v3": {
     "prefix": "nb-MenuItem",
-      "body": [
-        "<Menu.Item $1>$2</Menu.Item>",
-        "$0"
-      ],
-        "description": "ListItem component: NativeBase v3"
+    "body": ["<Menu.Item $1>$2</Menu.Item>", "$0"],
+    "description": "ListItem component: NativeBase v3"
   },
   //ActionSheet
   "ActionSheet component: NativeBase v3": {
@@ -479,132 +359,152 @@
       "\t\t$5",
       "\t</ActionSheetContent>",
       "</ActionSheet>",
-       "$0",
+      "$0"
     ],
     "description": "ActionSheet component: NativeBase v3"
   },
+  //ActionSheet.Item
   "ActionSheetItem component: NativeBase v3": {
-  "prefix": "nb-ActionSheetItem",
-  "body": [
-    "<ActionSheet.Item $1>$2</ActionSheet.Item>",
-    "$0"
-  ],
-  "description": "ActionSheetItem component: NativeBase v3"
-},
+    "prefix": "nb-ActionSheetItem",
+    "body": ["<ActionSheet.Item $1>$2</ActionSheet.Item>", "$0"],
+    "description": "ActionSheetItem component: NativeBase v3"
+  },
   //Alert component
   "Alert component: NativeBase v3": {
     "prefix": "nb-Alert",
-      "body": [
-        "<Alert $1>",
-        "\t<AlertIcon $2/>",
-        "\t<Alert.Title $3>$4</Alert.Title>",
-        "\t<Alert.Description $5>$6</Alert.Description>",
-        "</Alert>",
-        "$0",
-      ],
-        "description": "Alert component: NativeBase v3"
+    "body": [
+      "<Alert $1>",
+      "\t<AlertIcon $2/>",
+      "\t<Alert.Title $3>$4</Alert.Title>",
+      "\t<Alert.Description $5>$6</Alert.Description>",
+      "</Alert>",
+      "$0"
+    ],
+    "description": "Alert component: NativeBase v3"
   },
 
   //FormControl
   "FormControl component: NativeBase v3": {
-  "prefix": "nb-FormControl",
-  "body": [
-    "<FormControl $1>",
-    "  $2",
-    "</FormControl>"
-  ],
-  "description": "FormControl component: NativeBase v3"
+    "prefix": "nb-FormControl",
+    "body": ["<FormControl $1>", "\t$2", "</FormControl>", "$0"],
+    "description": "FormControl component: NativeBase v3"
   },
 
   //FormControl.Label
   "FormControl.Label component: NativeBase v3": {
-  "prefix": "nb-FormControl.Label",
-  "body": [
-    "<FormControl.Label $1>$2</FormControl.Label>"
-     "$0",
-  ],
-  "description": "FormControl.Label component: NativeBase v3"
+    "prefix": "nb-FormControl.Label",
+    "body": ["<FormControl.Label $1>$2</FormControl.Label>", "$0"],
+    "description": "FormControl.Label component: NativeBase v3"
   },
-
 
   // FormControl.HelperText
   "FormControl.HelperText component: NativeBase v3": {
-  "prefix": "nb-FormControl.HelperText",
-  "body": [
-    "<FormControl.HelperText $1>$2</FormControl.HelperText>"
-    "$0",
-  ],
-  "description": "FormControl.HelperText component: NativeBase v3"
+    "prefix": "nb-FormControl.HelperText",
+    "body": ["<FormControl.HelperText $1>$2</FormControl.HelperText>", "$0"],
+    "description": "FormControl.HelperText component: NativeBase v3"
   },
 
-
   // FormControl.ErrorMessage
-"FormControl.ErrorMessage component: NativeBase v3": {
-  "prefix": "nb-FormControl.ErrorMessage",
-  "body": [
-    "<FormControl.ErrorMessage $1>$2</FormControl.ErrorMessage>",
-    "$0"
-  ],
-  "description": "FormControl.ErrorMessage component: NativeBase v3"
-},
+  "FormControl.ErrorMessage component: NativeBase v3": {
+    "prefix": "nb-FormControl.ErrorMessage",
+    "body": [
+      "<FormControl.ErrorMessage $1>$2</FormControl.ErrorMessage>",
+      "$0"
+    ],
+    "description": "FormControl.ErrorMessage component: NativeBase v3"
+  },
 
-  //fab
- "Fab component: NativeBase v3": {
-  "prefix": "nb-Fab",
-  "body": [
-    "<Fab",
-    "  ${1:label={",
-    "    <Text $2>",
-    "      ${3:Hello}",
-    "    </Text>",
-    "  }",
-    "  }",
-    "  $4",
-    "/>",
-    "$0"
-  ],
-  "description": "Fab component: NativeBase v3"
-}
-
+  //Fab
+  "Fab component: NativeBase v3": {
+    "prefix": "nb-Fab",
+    "body": [
+      "<Fab",
+      "\t${1:label={",
+      "\t\t<Text $2>${3:Hello}</Text>",
+      "\t\\}}",
+      "\t$4",
+      "/>",
+      ""
+    ],
+    "description": "Fab component: NativeBase v3"
+  },
 
   //Slide
   "Slide component: NativeBase v3": {
-  "prefix": "nb-Slide",
-  "body": [
-    "<Slide in={${2|true,false|}} $3>",
-    "  $4",
-    "</Slide>",
-    "$0"
-  ],
-  "description": "Slide component: NativeBase v3"
+    "prefix": "nb-Slide",
+    "body": ["<Slide in={${2|'hide','show'|}} $3>", "\t$4", "</Slide>", "$0"],
+    "description": "Slide component: NativeBase v3"
   },
 
   //tooltip
- "Tooltip component: NativeBase v3": {
-  "prefix": "nb-Tooltip",
-  "body": [
-    "<Tooltip",
-    " label=\"${1:Hello there!}\"",
-    " $3",
-    ">",
-    " $4",
-    "</Tooltip>",
-    "$0",
-  ],
-  "description": "Tooltip component: NativeBase v3"
+  "Tooltip component: NativeBase v3": {
+    "prefix": "nb-Tooltip",
+    "body": [
+      "<Tooltip",
+      "\tlabel=\"${1:Hello there!}\"",
+      "\t$3",
+      ">",
+      "\t$4",
+      "</Tooltip>",
+      "$0"
+    ],
+    "description": "Tooltip component: NativeBase v3"
   },
- 
- //stagger
- "Stagger component: NativeBase v3": {
-  "prefix": "nb-Stagger",
-  "body": [
-    "<Stagger",
-    "  visible={$1}",
-    "  $2",
-    ">",
-    "</Stagger>",
-    "$0"
-  ],
-  "description": "Stagger component: NativeBase v3"
-},
+  "PresenceTransition component: NativeBase v3": {
+    "prefix": "nb-PresenceTransition",
+    "body": [
+      "<PresenceTransition",
+      "\tvisible={${1:true}}",
+      "\t$2",
+      ">",
+      "\t$3",
+      "</PresenceTransition>",
+      "$0"
+    ],
+    "description": "PresenceTransition component: NativeBase v3"
+  },
+  //Stagger
+  "Stagger component: NativeBase v3": {
+    "prefix": "nb-Stagger",
+    "body": [
+      "<Stagger",
+      "\tvisible={${1:true}}",
+      "\t$2",
+      ">",
+      "\t$3",
+      "</Stagger>",
+      "$0"
+    ],
+    "description": "Stagger component: NativeBase v3"
+  },
+  //SimpleGrid
+  "SimpleGrid component: NativeBase v3": {
+    "prefix": "nb-SimpleGrid",
+    "body": ["<SimpleGrid columns={$1} $2>", "\t$3", "</SimpleGrid>", "$0"],
+    "description": "SimpleGrid component: NativeBase v3"
+  },
+  //Tabs
+  "Tabs component: NativeBase v3": {
+    "prefix": "nb-Tabs",
+    "body": ["<Tabs $1>", "\t$2", "</Tabs>", "$0"],
+    "description": "Tabs component: NativeBase v3"
+  },
+  //Tabs.Bar
+  "Tabs.Bar component: NativeBase v3": {
+    "prefix": "nb-Tabs.Bar",
+    "body": ["<Tabs.Bar $1>", "\t$2", "</Tabs.Bar>", "$0", ""],
+    "description": "Tabs.Bar component: NativeBase v3"
+  },
+  //Tabs.Views
+  "Tabs.Views component: NativeBase v3": {
+    "prefix": "nb-Tabs.Views",
+    "body": ["<Tabs.Views $1>", "\t$2", "</Tabs.Views>", "$0", ""],
+    "description": "Tabs.Views component: NativeBase v3"
+  },
+  //Tabs.View
+  "Tabs.View component: NativeBase v3": {
+    "prefix": "nb-Tabs.View",
+    "body": ["<Tabs.View $1>$2</Tabs.View>", "$0", ""],
+    "description": "Tabs.View component: NativeBase v3"
+  }
 }
