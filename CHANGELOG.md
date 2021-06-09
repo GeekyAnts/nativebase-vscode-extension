@@ -53,3 +53,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Snippet for Progress
 - Snippet for PresenceTransition
 - Snippet for Tabs
+- Snippet for AlertDialog

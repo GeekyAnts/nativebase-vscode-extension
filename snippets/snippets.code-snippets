@@ -67,10 +67,10 @@
     "prefix": "nb-Image",
     "body": [
       "<Image",
-      "\tsrc={{",
+      "\tsource={{",
       "\t\turi:\"${1:https://wallpaperaccess.com/full/317501.jpg}\"",
       "\t}}",
-      "\tsize={${2|xs,sm,md,lg,xl,2xl|}}",
+      "\tsize={${2|'xs','sm','md','lg','xl','2xl'|}}",
       "\t$3",
       "/>",
       "$0"
@@ -86,19 +86,27 @@
   //RadioItem
   "Radio component: NativeBase v3": {
     "prefix": "nb-RadioItem",
-    "body": ["<Radio $1>$2</Radio>", "$0"],
+    "body": ["<Radio value=${1:} $2>$3</Radio>", "$0"],
     "description": "Radio component: NativeBase v3"
   },
   //Select Component
   "Select component: NativeBase v3": {
     "prefix": "nb-Select",
-    "body": ["<Select $1>", "\t$2", "</Select>", "$0"],
+    "body": [
+      "<Select selectedValue=\"${1:NativeBase}\" $2>",
+      "\t$3",
+      "</Select>",
+      "$0"
+    ],
     "description": "Select component: NativeBase v3"
   },
   //SelectItem
   "Select.Item component: NativeBase v3": {
     "prefix": "nb-SelectItem",
-    "body": ["<Select.Item $1>$2</Select.Item>", "$0"],
+    "body": [
+      "<Select.Item label=\"${1:NativeBase}\" value=\"${2:NativeBase}\" $3 />",
+      "$0"
+    ],
     "description": "SelectItem component: NativeBase v3"
   },
   //Switch
@@ -146,7 +154,12 @@
   //checkbox
   "Checkbox component: NativeBase v3": {
     "prefix": "nb-Checkbox",
-    "body": ["<Checkbox $1>", "\t$2", "</Checkbox>", "$0"],
+    "body": [
+      "<Checkbox value=\"${1:NativeBase}\" $2>",
+      "\t$3",
+      "</Checkbox>",
+      "$0"
+    ],
     "description": "Checkbox component: NativeBase v3"
   },
   //Slider
@@ -173,7 +186,7 @@
   //link
   "Link component: NativeBase v3": {
     "prefix": "nb-Link",
-    "body": ["<Link $1>$2</Link>", "$0"],
+    "body": ["<Link href=\"${1:https://nativebase.io}\" $2>$3</Link>", "$0"],
     "description": "Link component: NativeBase v3"
   },
   //icon-button
@@ -237,17 +250,16 @@
     "prefix": "nb-Toast",
     "body": [
       "toast.show({",
-      "\ttitle:${1:'Hello World!'},",
+      "\ttitle:\"${1:Hello There!}\",",
       "\t$2",
       "})",
-      "$0",
-      ""
+      "$0"
     ],
     "description": "Toast component: NativeBase v3"
   },
   "Icon component: NativeBase v3": {
     "prefix": "nb-Icon",
-    "body": ["<Icon as=\"$1\" name=\"$2\" $3 />", "$0"],
+    "body": ["<Icon as={${1:}} name='${2:}' $3 />", "$0"],
     "description": "Icon component: NativeBase v3"
   },
   //Avatar
@@ -255,17 +267,19 @@
     "prefix": "nb-Avatar",
     "body": [
       "<Avatar",
-      "\tsrc={{",
+      "\tsource={{",
       "\t\turi:\"${1:https://wallpaperaccess.com/full/317501.jpg}\"",
       "\t}}",
       "\t$2",
-      "/>",
+      ">",
+      "\t$3",
+      "</Avatar>",
       "$0"
     ],
     "description": "Avatar component: NativeBase v3"
   },
   //AvatarBadge
-  "AvatarBadege component: NativeBase v3": {
+  "AvatarBadge component: NativeBase v3": {
     "prefix": "nb-AvatarBadge",
     "body": ["<Avatar.Badge $1 />", "$0"],
     "description": "AvatarBadege component: NativeBase v3"
@@ -273,7 +287,7 @@
   //Avatar group
   "AvatarGoup component: NativeBase v3": {
     "prefix": "nb-AvatarGroup",
-    "body": ["<Avatar.Goup $1>", "\t$2", "</Avatar.Goup>", "$0"],
+    "body": ["<Avatar.Group $1>", "\t$2", "</Avatar.Group>", "$0"],
     "description": "AvatarGoup component: NativeBase v3"
   },
 
@@ -349,32 +363,32 @@
     "description": "ListItem component: NativeBase v3"
   },
   //ActionSheet
-  "ActionSheet component: NativeBase v3": {
+  "Actionsheet component: NativeBase v3": {
     "prefix": "nb-Actionsheet",
     "body": [
-      "<ActionSheet isOpen={${1:isOpen}} isClose={${2:isClose}}",
+      "<Actionsheet isOpen={${1:isOpen}} isClose={${2:isClose}}",
       "\t$3",
       ">",
-      "\t<ActionSheetContent $4>",
+      "\t<Actionsheet.Content $4>",
       "\t\t$5",
-      "\t</ActionSheetContent>",
-      "</ActionSheet>",
+      "\t</Actionsheet.Content>",
+      "</Actionsheet>",
       "$0"
     ],
-    "description": "ActionSheet component: NativeBase v3"
+    "description": "Actionsheet component: NativeBase v3"
   },
-  //ActionSheet.Item
-  "ActionSheetItem component: NativeBase v3": {
-    "prefix": "nb-ActionSheetItem",
-    "body": ["<ActionSheet.Item $1>$2</ActionSheet.Item>", "$0"],
-    "description": "ActionSheetItem component: NativeBase v3"
+  //Actionsheet.Item
+  "ActionsheetItem component: NativeBase v3": {
+    "prefix": "nb-ActionsheetItem",
+    "body": ["<Actionsheet.Item $1>$2</Actionsheet.Item>", "$0"],
+    "description": "ActionsheetItem component: NativeBase v3"
   },
   //Alert component
   "Alert component: NativeBase v3": {
     "prefix": "nb-Alert",
     "body": [
       "<Alert $1>",
-      "\t<AlertIcon $2/>",
+      "\t<Alert.Icon $2/>",
       "\t<Alert.Title $3>$4</Alert.Title>",
       "\t<Alert.Description $5>$6</Alert.Description>",
       "</Alert>",
@@ -432,7 +446,7 @@
   //Slide
   "Slide component: NativeBase v3": {
     "prefix": "nb-Slide",
-    "body": ["<Slide in={${2|'hide','show'|}} $3>", "\t$4", "</Slide>", "$0"],
+    "body": ["<Slide in=={${1:true}} $2>", "\t$3", "</Slide>", "$0"],
     "description": "Slide component: NativeBase v3"
   },
 
@@ -450,6 +464,7 @@
     ],
     "description": "Tooltip component: NativeBase v3"
   },
+  //Presence Transition
   "PresenceTransition component: NativeBase v3": {
     "prefix": "nb-PresenceTransition",
     "body": [
@@ -483,13 +498,40 @@
     "body": ["<SimpleGrid columns={$1} $2>", "\t$3", "</SimpleGrid>", "$0"],
     "description": "SimpleGrid component: NativeBase v3"
   },
+  //Alert Dialog
+  "AlertDialog component: NativeBase v3": {
+    "prefix": "nb-AlertDialog",
+    "body": [
+      "<AlertDialog $1>",
+      "\t<AlertDialog.Content $2>",
+      "\t\t<AlertDialog.Header $3>",
+      "\t\t\t$4",
+      "\t\t</AlertDialog.Header>",
+      "\t\t<AlertDialog.Body $5>",
+      "\t\t\t$6",
+      "\t\t</AlertDialog.Body>",
+      "\t\t<AlertDialog.Footer $7>",
+      "\t\t\t$8",
+      "\t\t</AlertDialog.Footer>",
+      "\t</AlertDialog.Content>",
+      "</AlertDialog>",
+      "$0"
+    ],
+    "description": "Alert component: NativeBase v3"
+  },
   //Tabs
   "Tabs component: NativeBase v3": {
     "prefix": "nb-Tabs",
     "body": ["<Tabs $1>", "\t$2", "</Tabs>", "$0"],
     "description": "Tabs component: NativeBase v3"
   },
-  //Tabs.Bar
+  //Tabs.Tab
+  "Tabs.Tab component: NativeBase v3": {
+    "prefix": "nb-Tabs.Tab",
+    "body": ["<Tabs.Tab $1>", "\t$2", "</Tabs.Tab>", "$0", ""],
+    "description": "Tabs.Tab component: NativeBase v3"
+  },
+  //Tabs.bar
   "Tabs.Bar component: NativeBase v3": {
     "prefix": "nb-Tabs.Bar",
     "body": ["<Tabs.Bar $1>", "\t$2", "</Tabs.Bar>", "$0", ""],
