@@ -20,16 +20,6 @@
     ],
     "description": "Box component: NativeBase v3"
   },
-  "View component: NativeBase v3": {
-    "prefix": "nb-view",
-    "body": [
-      "<View bg=\"${1:primary.400}\" p=\"${2:12}\" rounded=\"${3:lg}\" $4>",
-      "\t${5:View}",
-      "</View>",
-      "$0"
-    ],
-    "description": "View component: NativeBase v3"
-  },
   //Center
   "Center component: NativeBase v3": {
     "prefix": "nb-center",
