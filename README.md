@@ -1,6 +1,6 @@
-# nativebase extension README
+# NativeBase VSCode Extension
 
-NativeBase v3 snippets are a group of short-hands that can be used to further speed up your development. All snippets start with the prefix nb- followed by the name of the component, so that it’s easy to find and use them.
+NativeBase v3 snippets are a group of short-hands that can be used to further speed up your development. All snippets start with the prefix `nb-` followed by the name of the component, so that it’s easy to find and use them.
 
 ---
 
@@ -16,7 +16,7 @@ This extension allows you to speed up your development by providing working snip
 
 ### 1.0.0
 
-Initial release of NativeBase v3 snippets with the following component support:
+### Added
 
 - Snippet for NativeBase Provider
 - Snippet for Box
