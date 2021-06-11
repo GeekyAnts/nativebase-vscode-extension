@@ -2,9 +2,9 @@
 
 NativeBase v3 snippets are a group of short-hands that can be used to further speed up your development. All snippets start with the prefix `nb-` followed by the name of the component, so that it's easy to find and use them.
 
----
-
 ![NativeBaseSnippet](./images/NativeBaseSnippet.gif)
+
+---
 
 ## Features
 
