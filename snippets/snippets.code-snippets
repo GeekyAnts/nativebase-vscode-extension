@@ -784,8 +784,8 @@
       "\t</Tabs.Bar>",
       "\t<Tabs.Views>",
       "\t\t<Tabs.View>One</Tabs.View>",
-      "\t\t<Tabs.View>One</Tabs.View>",
-      "\t\t<Tabs.View>One</Tabs.View>",
+      "\t\t<Tabs.View>Two</Tabs.View>",
+      "\t\t<Tabs.View>Three</Tabs.View>",
       "\t</Tabs.Views>",
       "</Tabs>",
       "$0"
