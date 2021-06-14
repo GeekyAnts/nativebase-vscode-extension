@@ -1,7 +1,7 @@
 {
-  "name": "nativebase-v3-snippets",
-  "displayName": "NativeBase v3 Snippets",
-  "description": "Common snippets to be used as short-hand.",
+  "name": "nativebase-v3-vscode-extension",
+  "displayName": "NativeBase VS Code Extension",
+  "description": "NativeBase VS Code Extensions are specifically designed to quicken your development process using NativeBase v3.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.56.0"
