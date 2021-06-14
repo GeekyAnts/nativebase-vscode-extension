@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/GeekyAnts/nativebase-vscode-extension"
   },
-  "icon": "/images/logo.png",
+  "icon": "images/logo.png",
   "version": "0.1.1",
   "engines": {
     "vscode": "^1.56.0"
