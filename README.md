@@ -14,7 +14,7 @@ NativeBase snippets are shorthand for commonly used NativeBase components. All s
 
 This extension provides working snippets that make it easy to navigate between different breakpoints by using tabs. Here's a quick look at snippets in action:
 
-![NativeBaseSnippet](https://github.com/GeekyAnts/nativebase-vscode-extension/blob/master/images/NativeBaseSnippet.gif)
+![NativeBaseSnippet](./images/NativeBaseSnippet.gif)
 
 ---
 

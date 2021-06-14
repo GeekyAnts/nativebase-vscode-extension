@@ -3,6 +3,10 @@
   "displayName": "NativeBase VS Code Extension",
   "description": "NativeBase VS Code Extensions are specifically designed to quicken your development process using NativeBase v3.",
   "publisher": "NativeBase",
+  "repository": {
+    "url": "https://github.com/GeekyAnts/nativebase-vscode-extension"
+  },
+  "icon": "https://github.com/GeekyAnts/nativebase-vscode-extension/blob/master/images/logo.png",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.56.0"
