@@ -1,1 +1,0 @@
-{"version":3,"file":"resolveBorder.js","sourceRoot":"","sources":["../../src/utils/resolveBorder.ts"],"names":[],"mappings":";;AACA,8CAAuC;AACvC,MAAM,cAAc,GAAG,GAAG,EAAE;IAC3B,MAAM,YAAY,GAAa,EAAE,CAAC;IAClC,KAAK,MAAM,CAAC,GAAG,CAAC,IAAI,MAAM,CAAC,OAAO,CAAC,iBAAO,CAAC,EAAE;QAC5C,YAAY,CAAC,IAAI,CAAC,GAAG,CAAC,CAAC;KACvB;IACD,OAAO,YAAY,CAAC;AACrB,CAAC,CAAC;AACF,kBAAe,cAAc,CAAC"}
