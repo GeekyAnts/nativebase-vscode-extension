@@ -7,13 +7,13 @@ import resolveShadows from '../utils/resolveShadows';
 import resolveBorders from '../utils/resolveBorders';
 
 const themeMap = {
-	color: resolveColors,
-	typography: resolveTypography,
-	sizing: resolveSizing,
-	shadow: resolveShadows,
-	border: resolveBorders,
-	radius: resolveRadius,
-	spacing: resolveSpacing,
+  color: resolveColors,
+  typography: resolveTypography,
+  sizing: resolveSizing,
+  shadow: resolveShadows,
+  border: resolveBorders,
+  radius: resolveRadius,
+  spacing: resolveSpacing,
 };
 
 export default themeMap;
