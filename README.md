@@ -1,12 +1,70 @@
-# Completion Item Provider Sample
+# NativeBase VS Code Extensions README
 
-This sample shows how to provide completions aka IntelliSense into the editor. The sample uses the `CompletionItemProvider` api.
+## Introduction
 
-![Sample](demo.gif)
+NativeBase VS Code Extensions are specifically designed to quicken your development process using [NativeBase 3.0](https://alpha.nativebase.io/?utm_source=RnD&utm_medium=Snippet_README&utm_campaign=NativeBase_3).
 
+## Snippets
 
-## VS Code API
+NativeBase snippets are shorthand for commonly used NativeBase components. All snippets start with the prefix `nb-` and are followed by the name of the desired component. It's that simple.
 
-### `vscode` module
+---
 
-- [`languages.registerCompletionItemProvider`](https://code.visualstudio.com/api/references/vscode-api#languages.registerCompletionItemProvider)
+## How Snippets Work
+
+This extension provides working snippets that make it easy to navigate between different breakpoints by using tabs. Here's a quick look at snippets in action:
+
+![NativeBaseSnippet](./images/NativeBaseSnippet.gif)
+
+---
+
+## Release Notes (v1.0.0)
+
+### Added Snippets for the following NativeBase components:
+
+- NativeBase Provider
+- Box
+- View
+- Modal
+- Center
+- Container
+- Flex
+- HStack
+- VStack
+- Stack
+- ZStack
+- Button
+- Pressable
+- Checkbox
+- IconButton
+- Input
+- Link
+- Radio
+- Select
+- Slider
+- Switch
+- TextArea
+- Badge
+- Divider
+- List
+- Text
+- Heading
+- Avatar
+- Icon
+- Image
+- Menu
+- Alert
+- ActionSheet
+- Slide
+- Tooltip
+- Popover
+- Stagger
+- FAB
+- Toast
+- Spinner
+- Progress
+- PresenceTransition
+- Tabs
+- AlertDialog
+
+---

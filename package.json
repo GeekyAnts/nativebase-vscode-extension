@@ -1,14 +1,15 @@
 {
 	"name": "nativebase-v3-vscode-extension",
 	"displayName": "NativeBase VS Code Extension",
-	"version": "0.0.2",
-	"publisher": "vscode-samples",
+	"description": "NativeBase VS Code Extensions are specifically designed to quicken your development process using NativeBase v3.",
+	"publisher": "NativeBase",
 	"private": true,
+	"version": "1.0.3",
 	"license": "MIT",
 	"repository": {
-		"type": "git",
-		"url": "https://github.com/Microsoft/vscode-extension-samples"
+		"url": "https://github.com/GeekyAnts/nativebase-vscode-extension"
 	},
+	"icon": "/images/logo.png",
 	"engines": {
 		"vscode": "^1.32.0"
 	},

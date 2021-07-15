@@ -1,11 +1,14 @@
 {
 	// Setup snippets
+
 	"Setup NativeBase v3 Provider": {
 		"prefix": "nb-provider",
 		"body": ["<NativeBaseProvider $1>$2</NativeBaseProvider>$0"],
 		"description": "NativeBaseProvider:NativeBase v3"
 	},
+
 	// Primary Component snippets
+
 	//Box
 	"Box component: NativeBase v3": {
 		"prefix": "nb-box",
@@ -400,7 +403,9 @@
 		],
 		"description": "AvatarGoup component: NativeBase v3"
 	},
+
 	// Composite Component snippets
+
 	//Modal
 	"Modal component : NativeBase v3": {
 		"prefix": "nb-modal",
@@ -520,6 +525,7 @@
 		],
 		"description": "Alert component: NativeBase v3"
 	},
+
 	//FormControl
 	"FormControl component: NativeBase v3": {
 		"prefix": "nb-form-control",
@@ -572,6 +578,7 @@
 		],
 		"description": "Fab component: NativeBase v3"
 	},
+
 	//Slide
 	"Slide component: NativeBase v3": {
 		"prefix": "nb-slide",
@@ -585,6 +592,7 @@
 		],
 		"description": "Slide component: NativeBase v3"
 	},
+
 	//tooltip
 	"Tooltip component: NativeBase v3": {
 		"prefix": "nb-tooltip",
