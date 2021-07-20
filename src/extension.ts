@@ -4,10 +4,8 @@ import propMap from './config/propMap';
 import themeMap from './config/themeMap';
 import getValidProp from './utils/getValidProp';
 import convertToCompletionItems from './utils/convertToCompletionItems';
-import getValidWorkspaceFolders from "./utils/getValidWorkspaceFolders";
-import checkNativeBaseImported from "./utils/checkNativeBaseImported";
-
-
+import getValidWorkspaceFolders from './utils/getValidWorkspaceFolders';
+import checkNativeBaseImported from './utils/checkNativeBaseImported';
 
 function hasKey<O>(obj: O, key: PropertyKey): key is keyof O {
   return key in obj;
@@ -21,30 +19,19 @@ export function activate(context: vscode.ExtensionContext) {
     { language: 'typescriptreact' },
   ];
 
-
-
   //get valid workspaces
   const validWorkspaces = getValidWorkspaceFolders();
-
-
-
-
 
   const suggestionsProvider = vscode.languages.registerCompletionItemProvider(
     document_selector,
     {
       provideCompletionItems(
         document: vscode.TextDocument,
-        position: vscode.Position,
+        position: vscode.Position
       ) {
-
-
-
         //check if nb is imported in the file
         if (validWorkspaces.length === 0 || !checkNativeBaseImported())
           return undefined;
-
-
 
         //check currentFile is present in valid workspace
         const fileName = vscode.window.activeTextEditor?.document.fileName;
@@ -52,10 +39,7 @@ export function activate(context: vscode.ExtensionContext) {
           ?.map((folder) => folder.uri.fsPath)
           .filter((fsPath) => fileName?.startsWith(fsPath))[0];
 
-        if (!validWorkspaces.includes(projectName))
-          return undefined;
-
-
+        if (!validWorkspaces.includes(projectName)) return undefined;
 
         const linePrefix = document
           .lineAt(position)
