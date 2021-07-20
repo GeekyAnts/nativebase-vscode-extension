@@ -9,11 +9,10 @@ const checkNativeBaseImported = () => {
 		let importPresent = false;
 		for (let i = 0; i < lineArray.length; i++) {
 			if (lineArray[i].includes(`from 'native-base';`) || lineArray[i].includes(`from "native-base";`)) {
-				importPresent = true;
-				break;
+				return true;
 			}
 		}
-		return importPresent;
+		return false;
 	}
 	return false;
 };
