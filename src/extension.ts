@@ -6,6 +6,8 @@ import getValidProp from './utils/getValidProp';
 import convertToCompletionItems from './utils/convertToCompletionItems';
 import getValidWorkspaceFolders from './utils/getValidWorkspaceFolders';
 import checkNativeBaseImported from './utils/checkNativeBaseImported';
+import extendTheme from './utils/extendTheme';
+import { ifError } from 'assert';
 
 function hasKey<O>(obj: O, key: PropertyKey): key is keyof O {
   return key in obj;
@@ -21,6 +23,11 @@ export function activate(context: vscode.ExtensionContext) {
 
   //get valid workspaces
   const validWorkspaces = getValidWorkspaceFolders();
+  extendTheme();
+
+  vscode.workspace.onDidSaveTextDocument(() => {
+    extendTheme();
+  });
 
   const suggestionsProvider = vscode.languages.registerCompletionItemProvider(
     document_selector,

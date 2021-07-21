@@ -1,7 +1,10 @@
 import colors from '../theme/colors';
+const _ = require('lodash');
+import { extendThemeObject } from '../utils/extendTheme';
 const resolveColors = () => {
+  const colorsObj: object = _.merge(colors, extendThemeObject.colors);
   const validColors: object[] = [];
-  for (const [colorName, value] of Object.entries(colors)) {
+  for (const [colorName, value] of Object.entries(colorsObj)) {
     if (colorName === 'contrastThreshold') continue;
     if (typeof value === 'object') {
       for (const [colorValue, rgb] of Object.entries(value)) {
