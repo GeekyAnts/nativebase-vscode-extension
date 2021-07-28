@@ -14,17 +14,28 @@ const extendTheme = () => {
   if (workspaceFolders) {
     workspaceFolders.map(async (workspaceFolder) => {
       //theme file path
-      const themePath: string = path.join(
+      const themeJsPath: string = path.join(
         workspaceFolder.uri.fsPath,
         'theme.js'
       );
-      const fileContent = fs.readFileSync(themePath, 'utf8');
-      const startIndex = fileContent.indexOf('extendTheme(');
-      const objStart = startIndex + 'extendTheme('.length;
-      const endIndex = fileContent.indexOf('});', objStart);
-      const objectEnd = endIndex + 1;
-      const extendThemeString = fileContent.substring(objStart, objectEnd);
-      extendThemeObject = Hjson.parse(extendThemeString);
+      const themeTsPath: string = path.join(
+        workspaceFolder.uri.fsPath,
+        'theme.js'
+      );
+      const themePath = themeJsPath
+        ? themeJsPath
+        : themeTsPath
+        ? themeTsPath
+        : '';
+      if (fs.existsSync(themePath)) {
+        const fileContent = fs.readFileSync(themePath, 'utf8');
+        const startIndex = fileContent.indexOf('extendTheme(');
+        const objStart = startIndex + 'extendTheme('.length;
+        const endIndex = fileContent.indexOf('});', objStart);
+        const objectEnd = endIndex + 1;
+        const extendThemeString = fileContent.substring(objStart, objectEnd);
+        extendThemeObject = Hjson.parse(extendThemeString);
+      }
     });
   }
 };

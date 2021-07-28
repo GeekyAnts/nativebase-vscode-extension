@@ -1,6 +1,10 @@
 import * as vscode from 'vscode';
 
-const convertToCompletionItems = (suggestionsList: any, validProp: string) => {
+const convertToCompletionItems = (
+  suggestionsList: any,
+  validProp: string,
+  isWrapped: boolean
+) => {
   const completionItems = suggestionsList.map((item: any, index: number) => {
     const colorProps = [
       'color',
@@ -19,7 +23,7 @@ const convertToCompletionItems = (suggestionsList: any, validProp: string) => {
     );
 
     completionItem.label = item.name;
-    completionItem.insertText = `"${item.name}"`;
+    !isWrapped ? (completionItem.insertText = `"${item.name}"`) : item.name;
     completionItem.detail = item.value.toString();
     completionItem.documentation = colorProps.includes(validProp)
       ? item.value.toString()

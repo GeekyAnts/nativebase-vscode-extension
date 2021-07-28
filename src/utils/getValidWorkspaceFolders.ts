@@ -19,6 +19,9 @@ const getValidWorkspaceFolders = () => {
         workspaceFolder.uri.fsPath,
         'node_modules'
       );
+      if (!fs.existsSync(nodeModulesPath) || !fs.existsSync(packageJsonPath)) {
+        return [];
+      }
 
       //check native-base is there in node_modules
       const nodeModules = fs.readdirSync(nodeModulesPath);

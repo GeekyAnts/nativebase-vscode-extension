@@ -7,7 +7,6 @@ import convertToCompletionItems from './utils/convertToCompletionItems';
 import getValidWorkspaceFolders from './utils/getValidWorkspaceFolders';
 import checkNativeBaseImported from './utils/checkNativeBaseImported';
 import extendTheme from './utils/extendTheme';
-import { ifError } from 'assert';
 
 function hasKey<O>(obj: O, key: PropertyKey): key is keyof O {
   return key in obj;
@@ -25,6 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
   const validWorkspaces = getValidWorkspaceFolders();
   extendTheme();
 
+  //todo- save only when theme.js or theme.ts is saved
   vscode.workspace.onDidSaveTextDocument(() => {
     extendTheme();
   });
@@ -48,28 +48,39 @@ export function activate(context: vscode.ExtensionContext) {
 
         if (!validWorkspaces.includes(projectName)) return undefined;
 
+        //returns the text that is written
         const linePrefix = document
           .lineAt(position)
           .text.substr(0, position.character);
 
-        const validProp = getValidProp(linePrefix);
+        //find the valid propObject from the linePrefix. isWrapped differs bw bg= and bg=""
+        const validPropObj: {
+          isWrapped: boolean;
+          validProp: string;
+        } = getValidProp(linePrefix);
 
-        if (hasKey(propMap, validProp)) {
-          const themeMapKey = propMap[validProp];
+        if (hasKey(propMap, validPropObj.validProp)) {
+          //get the themeKey which corresponds to the valid prop
+          const themeMapKey = propMap[validPropObj.validProp];
 
           if (hasKey(themeMap, themeMapKey)) {
+            //get the resolver function corresponding to theme key
             const propResolverFunction = themeMap[themeMapKey];
 
+            //get the suggestion list from the resolver function
             let suggestionsList: object[] | undefined = propResolverFunction(
-              validProp
+              validPropObj.validProp
             );
 
             if (suggestionsList === undefined) return undefined;
 
+            //convert the suggestions list to vscode-completion items
             const completionItems = convertToCompletionItems(
               suggestionsList,
-              validProp
+              validPropObj.validProp,
+              validPropObj.isWrapped
             );
+
             return completionItems;
           }
           return undefined;
@@ -77,7 +88,10 @@ export function activate(context: vscode.ExtensionContext) {
         return undefined;
       },
     },
-    '='
+    //triggering characters
+    '=',
+    `"`,
+    `'`
   );
 
   context.subscriptions.push(suggestionsProvider);
