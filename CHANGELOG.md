@@ -1,12 +1,8 @@
 # Change Log
 
-All notable changes to the "nativebase-v3-snippets" extension will be documented in this file.
+All notable changes to the "nativebase-v3-vscode-extension" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-## [1.0.0] - 2021-06-07
+## [0.1.2] - 2021-06-07
 
 ### Added
 
