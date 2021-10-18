@@ -814,5 +814,18 @@
     "prefix": "nb-tabs.view",
     "body": ["<Tabs.View $1>${2:View}</Tabs.View>", "$0", ""],
     "description": "Tabs.View component: NativeBase v3"
-  }
+  },
+  "Hidden component: NativeBase v3": {
+    "prefix": "nb-hidden",
+    "body": [
+      "<Hidden>",
+      "\t <Box bg=\"red.400\" p=\"2\"> ",
+      "\t\t<Text>This text will be always hidden.</Text>",
+      "\t</Box>",
+      "</Hidden>",
+      "$0",
+      ""
+    ],
+    "description": "Box component: NativeBase v3"
+  },
 }
