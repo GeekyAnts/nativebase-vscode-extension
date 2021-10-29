@@ -59,31 +59,30 @@ export function activate(context: vscode.ExtensionContext) {
           validProp: string;
         } = getValidProp(linePrefix);
 
-        if (hasKey(propMap, validPropObj.validProp)) {
-          //get the themeKey which corresponds to the valid prop
-          const themeMapKey = propMap[validPropObj.validProp];
+        //get themKey corresponding to the prop
+        const themeMapKey = hasKey(propMap, validPropObj.validProp)
+          ? propMap[validPropObj.validProp]
+          : undefined;
 
-          if (hasKey(themeMap, themeMapKey)) {
-            //get the resolver function corresponding to theme key
-            const propResolverFunction = themeMap[themeMapKey];
+        //get the resolver function corresponding to theme key
+        const propResolverFunction =
+          themeMapKey && hasKey(themeMap, themeMapKey)
+            ? themeMap[themeMapKey]
+            : undefined;
 
-            //get the suggestion list from the resolver function
-            let suggestionsList: object[] | undefined = propResolverFunction(
-              validPropObj.validProp
-            );
+        if (propResolverFunction) {
+          //get the suggestion list from the resolver function
+          let suggestionsList: object[] = propResolverFunction(
+            validPropObj.validProp
+          );
 
-            if (suggestionsList === undefined) return undefined;
-
-            //convert the suggestions list to vscode-completion items
-            const completionItems = convertToCompletionItems(
-              suggestionsList,
-              validPropObj.validProp,
-              validPropObj.isWrapped
-            );
-
-            return completionItems;
-          }
-          return undefined;
+          //convert the suggestions list to vscode-completion items
+          const completionItems = convertToCompletionItems(
+            suggestionsList,
+            validPropObj.validProp,
+            validPropObj.isWrapped
+          );
+          return completionItems;
         }
         return undefined;
       },
