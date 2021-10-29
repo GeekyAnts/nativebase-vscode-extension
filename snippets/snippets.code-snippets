@@ -476,7 +476,7 @@
   "MenuItem component: NativeBase v3": {
     "prefix": "nb-menu-item",
     "body": ["<Menu.Item $1>${2:Menu Item}</Menu.Item>", "$0"],
-    "description": "ListItem component: NativeBase v3"
+    "description": "MenuItem component: NativeBase v3"
   },
   //ActionSheet
   "Actionsheet component: NativeBase v3": {
@@ -700,22 +700,6 @@
     ],
     "description": "Stagger component: NativeBase v3"
   },
-  //SimpleGrid
-  "SimpleGrid component: NativeBase v3": {
-    "prefix": "nb-simple-grid",
-    "body": [
-      "<SimpleGrid columns={${1:2}} spacing={${2:3}}>",
-      "\t<Box bg=\"emerald.400\" size={16} rounded=\"lg\" />",
-      "\t<Box bg=\"blue.400\" size={16} rounded=\"lg\" />",
-      "\t<Box bg=\"red.400\" size={16} rounded=\"lg\" />",
-      "\t<Box bg=\"pink.400\" size={16} rounded=\"lg\" />",
-      "\t<Box bg=\"yellow.400\" size={16} rounded=\"lg\" />",
-      "$3",
-      "</SimpleGrid>",
-      "$0"
-    ],
-    "description": "SimpleGrid component: NativeBase v3"
-  },
   //Alert Dialog
   "AlertDialog component: NativeBase v3": {
     "prefix": "nb-alert-dialog",
@@ -752,53 +736,10 @@
     ],
     "description": "AlertDialog component: NativeBase v3"
   },
-  //Tabs
-  "Tabs component: NativeBase v3": {
-    "prefix": "nb-tabs",
-    "body": [
-      "<Tabs $1>",
-      "\t<Tabs.Bar>",
-      "\t\t<Tabs.Tab>One</Tabs.Tab>",
-      "\t\t<Tabs.Tab>Two</Tabs.Tab>",
-      "\t\t<Tabs.Tab>Three</Tabs.Tab>",
-      "\t</Tabs.Bar>",
-      "\t<Tabs.Views>",
-      "\t\t<Tabs.View>One</Tabs.View>",
-      "\t\t<Tabs.View>Two</Tabs.View>",
-      "\t\t<Tabs.View>Three</Tabs.View>",
-      "\t</Tabs.Views>",
-      "</Tabs>",
-      "$0"
-    ],
-    "description": "Tabs component: NativeBase v3"
-  },
-  //Tabs.Tab
-  "Tabs.Tab component: NativeBase v3": {
-    "prefix": "nb-tabs.tab",
-    "body": ["<Tabs.Tab $1>", "\t${2:Tab}", "</Tabs.Tab>", "$0", ""],
-    "description": "Tabs.Tab component: NativeBase v3"
-  },
-  //Tabs.Bar
-  "Tabs.Bar component: NativeBase v3": {
-    "prefix": "nb-tabs.bar",
-    "body": ["<Tabs.Bar $1>", "\t$2", "</Tabs.Bar>", "$0", ""],
-    "description": "Tabs.Bar component: NativeBase v3"
-  },
-  //Tabs.Views
-  "Tabs.Views component: NativeBase v3": {
-    "prefix": "nb-tabs.views",
-    "body": ["<Tabs.Views $1>", "\t$2", "</Tabs.Views>", "$0", ""],
-    "description": "Tabs.Views component: NativeBase v3"
-  },
-  //Tabs.View
-  "Tabs.View component: NativeBase v3": {
-    "prefix": "nb-tabs.view",
-    "body": ["<Tabs.View $1>${2:View}</Tabs.View>", "$0", ""],
-    "description": "Tabs.View component: NativeBase v3"
-  },
+  //Hidden Component
   "Hidden component: NativeBase v3": {
-	  "prefix": "nb-hidden",
-	  "body": [
+    "prefix": "nb-hidden",
+    "body": [
       "<Hidden>",
       "\t <Box bg=\"red.400\" p=\"2\"> ",
       "\t\t<Text>This text will be always hidden.</Text>",
@@ -806,7 +747,66 @@
       "</Hidden>",
       "$0",
       ""
-	  ],
-	  "description": "Hidden component: NativeBase v3"
-	},
+    ],
+    "description": "Hidden component: NativeBase v3"
+  },
+
+  //react native components
+  "View component: NativeBase v3": {
+    "prefix": "nb-view",
+    "body": ["<View>", "\t${1:View}", "</View>", "$0"],
+    "description": "View component: NativeBase v3"
+  },
+  "KeyboardAvoidingView component: NativeBase v3": {
+    "prefix": "nb-keyboard-avoiding-view",
+    "body": [
+      "<KeyboardAvoidingView $1>",
+      "\t$2",
+      "</KeyboardAvoidingView>",
+      "$0"
+    ],
+    "description": "KeyboardAvoidingView component: NativeBase v3"
+  },
+  "ScrollView component: NativeBase v3": {
+    "prefix": "nb-scroll-view",
+    "body": ["<ScrollView>", "\t${1:ScrollView}", "</ScrollView>", "$0"],
+    "description": "ScrollView component: NativeBase v3"
+  },
+  "StatusBar component: NativeBase v3": {
+    "prefix": "nb-status-bar",
+    "body": ["<StatusBar />", "$0"],
+    "description": "StatusBar component: NativeBase v3"
+  },
+  "FlatList component: NativeBase v3": {
+    "prefix": "nb-flat-list",
+    "body": [
+      "<FlatList>",
+      "\tdata={${1:data}}",
+      "\trenderItem={($2) => (",
+      "\t\t$3",
+      "\t)}",
+      "\t$4",
+      "</FlatList>",
+      "$0"
+    ],
+    "description": "FlatList component: NativeBase v3"
+  },
+  "SectionList component: NativeBase v3": {
+    "prefix": "nb-section-list",
+    "body": [
+      "<FlatList>",
+      "\tsections={${1:data}}",
+      "\tkeyExtractor={${2}}",
+      "\trenderItem={($3) => (",
+      "\t\t$4",
+      "\t)}",
+      "\trenderSectionHeader={($5) => (",
+      "\t\t$6",
+      "\t)}",
+      "\t$7",
+      "</FlatList>",
+      "$0"
+    ],
+    "description": "SectionList component: NativeBase v3"
+  }
 }
