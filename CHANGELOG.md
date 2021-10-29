@@ -6,6 +6,24 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.0] - 2020-07-29
+
+### Added
+
+- Snippet for Hidden
+- Snippet for View
+- Snippet for StatusBar
+- Snippet for KeyboardAvoidingView
+- Snippet for ScrollView
+- Snippet for SectionList
+- Snippet for FlatList
+
+### Removed
+
+- Snippet for List
+- Snippet for Tabs
+- Snippet for SimpleGrid
+
 ## [1.0.0] - 2021-06-07
 
 ### Added
