@@ -18,7 +18,7 @@ This extension provides working snippets that make it easy to navigate between d
 
 ---
 
-## Release Notes (v0.1.3) (Unreleased)
+## Release Notes (v0.1.3)
 
 ### Added Snippets for the following NativeBase components:
 
