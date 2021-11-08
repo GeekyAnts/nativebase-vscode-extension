@@ -13,7 +13,7 @@
   "Box component: NativeBase v3": {
     "prefix": "nb-box",
     "body": [
-      "<Box bg=\"${1:primary.400}\" p=\"${2:12}\" rounded=\"${3:lg}\" $4>",
+      "<Box $1 bg=\"${2:primary.400}\" p=\"${3:12}\" rounded=\"${4:lg}\">",
       "\t${5:Box}",
       "</Box>",
       "$0"
@@ -24,7 +24,7 @@
   "Center component: NativeBase v3": {
     "prefix": "nb-center",
     "body": [
-      "<Center bg=\"${1:primary.400}\" height={${2:200}} width={${3:200}} $4>",
+      "<Center $1 bg=\"${2:primary.400}\" p=\"${3:20}\">",
       "\t${5:Center}",
       "</Center>",
       ""
@@ -41,11 +41,11 @@
   "Flex component: NativeBase v3": {
     "prefix": "nb-flex",
     "body": [
-      "<Flex direction={'${1:row}'} $2>",
-      "\t<Center bg=\"primary.100\" size={16}></Center>",
-      "\t<Center bg=\"primary.200\" size={16}></Center>",
-      "\t<Center bg=\"primary.300\" size={16}></Center>",
-      "\t<Center bg=\"primary.400\" size={16}></Center>",
+      "<Flex $1 direction=\"${2|row,column|}\">",
+      "\t<Center bg=\"primary.100\" size=\"16\"></Center>",
+      "\t<Center bg=\"primary.200\" size=\"16\"></Center>",
+      "\t<Center bg=\"primary.300\" size=\"16\"></Center>",
+      "\t<Center bg=\"primary.400\" size=\"16\"></Center>",
       "</Flex>",
       "$0"
     ],
@@ -55,10 +55,10 @@
   "HStack component: NativeBase v3": {
     "prefix": "nb-hstack",
     "body": [
-      "<HStack space={${1:3}} alignItems=\"${2:center}\" $3>",
-      "\t<Center bg=\"primary.400\" size={16}></Center>",
-      "\t<Center bg=\"secondary.400\" size={16}></Center>",
-      "\t<Center bg=\"emerald.400\" size={16}></Center>",
+      "<HStack $1 space=\"${2:3}\" alignItems=\"${3:center}\">",
+      "\t<Center bg=\"primary.400\" size=\"16\"></Center>",
+      "\t<Center bg=\"secondary.400\" size=\"16\"></Center>",
+      "\t<Center bg=\"emerald.400\" size=\"16\"></Center>",
       "</HStack>",
       "$0"
     ],
@@ -68,10 +68,10 @@
   "Stack component: NativeBase v3": {
     "prefix": "nb-stack",
     "body": [
-      "<Stack direction={'${1:column}'} space={${2:3}} $3>",
-      "\t<Center bg=\"primary.400\" size={16}></Center>",
-      "\t<Center bg=\"secondary.400\" size={16}></Center>",
-      "\t<Center bg=\"emerald.400\" size={16}></Center>",
+      "<Stack $1 direction=\"${2|column,row|}\" space=\"${3:3}\">",
+      "\t<Center bg=\"primary.400\" size=\"16\"></Center>",
+      "\t<Center bg=\"secondary.400\" size=\"16\"></Center>",
+      "\t<Center bg=\"emerald.400\" size=\"16\"></Center>",
       "</Stack>",
       "$0"
     ],
@@ -81,11 +81,10 @@
   "VStack component: NativeBase v3": {
     "prefix": "nb-vstack",
     "body": [
-      "<VStack space={${1:5}} $2>",
-      "\t<Center bg=\"primary.400\" size={16}></Center>",
-      "\t<Center bg=\"secondary.400\" size={16}></Center>",
-      "\t<Center bg=\"emerald.400\" size={16}></Center>",
-      "$3",
+      "<VStack $1 space=\"${2:5}\">",
+      "\t<Center bg=\"primary.400\" size=\"16\"></Center>",
+      "\t<Center bg=\"secondary.400\" size=\"16\"></Center>",
+      "\t<Center bg=\"emerald.400\" size=\"16\"></Center>",
       "</VStack>",
       "$0"
     ],
@@ -96,9 +95,9 @@
     "prefix": "nb-zstack",
     "body": [
       "<ZStack $1>",
-      "<Box bg=\"primary.400\" size={20} rounded=\"lg\" shadow={3} />",
-      "<Box bg=\"secondary.400\" mt={5} ml={5} size={20} rounded=\"lg\" shadow={5} />",
-      "<Box bg=\"emerald.400\" mt={10} ml={10} size={20} rounded=\"lg\" shadow={7} />",
+      "\t<Box bg=\"primary.400\" size=\"20\" rounded=\"lg\" shadow=\"3\" />",
+      "\t<Box bg=\"secondary.400\" mt=\"5\" ml=\"5\" size=\"20\" rounded=\"lg\" shadow=\"5\" />",
+      "\t<Box bg=\"emerald.400\" mt=\"10\" ml=\"10\" size=\"20\" rounded=\"lg\" shadow=\"7\" />",
       "</ZStack>",
       "$0"
     ],
@@ -113,7 +112,7 @@
       "\t\turi:\"${1:https://wallpaperaccess.com/full/317501.jpg}\"",
       "\t}}",
       "\talt=\"${2:Alternate Text}\"",
-      "\tsize={${3|'xs','sm','md','lg','xl','2xl'|}}",
+      "\tsize=\"${3|xs,sm,md,lg,xl,2xl|}\"",
       "\t$4",
       "/>",
       "$0"
@@ -124,10 +123,9 @@
   "Radio component: NativeBase v3": {
     "prefix": "nb-radio",
     "body": [
-      "<Radio.Group name=\"${1:MyRadioGroup}\" $2>",
+      "<Radio.Group $1 name=\"${2:MyRadioGroup}\">",
       "\t<Radio value=\"one\">One</Radio>",
       "\t<Radio value=\"two\">Two</Radio>",
-      "\t$3",
       "</Radio.Group>",
       "$0"
     ],
@@ -135,7 +133,7 @@
   },
   "RadioItem component: NativeBase v3": {
     "prefix": "nb-radio-item",
-    "body": ["<Radio value=\"${1:value}\" $2>${3:Radio Item}</Radio>", "$0"],
+    "body": ["<Radio $1 value=\"${2:value}\">${3:Radio Item}</Radio>", "$0"],
     "description": "Radio component: NativeBase v3"
   },
   //Select Component
@@ -144,6 +142,7 @@
     "body": [
       "<Select",
       "\tplaceholder=\"${1:Select your favorite programming language}\"",
+      "\tminWidth=\"64\"",
       "\t$2",
       ">",
       "\t<Select.Item label=\"JavaScript\" value=\"js\" />",
@@ -151,7 +150,6 @@
       "\t<Select.Item label=\"C\" value=\"c\" />",
       "\t<Select.Item label=\"Python\" value=\"py\" />",
       "\t<Select.Item label=\"Java\" value=\"java\" />",
-      "\t$3",
       "</Select>",
       "$0"
     ],
@@ -161,7 +159,7 @@
   "Select.Item component: NativeBase v3": {
     "prefix": "nb-select-item",
     "body": [
-      "<Select.Item label=\"${1:NativeBase}\" value=\"${2:NativeBase}\" $3 />",
+      "<Select.Item $1 label=\"${2:NativeBase}\" value=\"${3:NativeBase}\" />",
       "$0"
     ],
     "description": "SelectItem component: NativeBase v3"
@@ -176,7 +174,7 @@
   "Text component: NativeBase v3": {
     "prefix": "nb-text",
     "body": [
-      "<Text fontSize=\"${1|xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl|}\" $2>${3:Text}</Text>",
+      "<Text $1 fontSize=\"${2|xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl,8xl,9xl|}\">${3:Text}</Text>",
       "$0"
     ],
     "description": "Text component: NativeBase v3"
@@ -192,8 +190,8 @@
     "prefix": "nb-button-group",
     "body": [
       "<Button.Group $1>",
-      "<Button colorScheme=\"teal\">Save</Button>",
-      "<Button colorScheme=\"danger\">Cancel</Button>",
+      "\t<Button colorScheme=\"teal\">Save</Button>",
+      "\t<Button colorScheme=\"danger\">Cancel</Button>",
       "</Button.Group>",
       "$0"
     ],
@@ -203,9 +201,11 @@
   "Button component: NativeBase v3": {
     "prefix": "nb-button",
     "body": [
-      "<Button colorScheme=\"${1:primary}\" onPress={()=>{",
-      "\t${2:console.log('hello')}",
-      "}}",
+      "<Button",
+      "\tcolorScheme=\"${1:primary}\"",
+      "\tonPress={()=>{",
+      "\t\t${2:console.log('hello')}",
+      "\t}}",
       "$3",
       ">",
       "\t${4:Primary}",
@@ -218,12 +218,15 @@
   "Pressable component: NativeBase v3": {
     "prefix": "nb-pressable",
     "body": [
-      "<Pressable p={${1:2}} borderWidth={${2:1}} onPress={()=>{",
-      "\t${3:console.log('hello')}",
-      "}}",
+      "<Pressable",
+      "\tp=\"${1:2}\"",
+      "\tborderWidth=\"${2:1}\"",
+      "\tonPress={()=>{",
+      "\t\t${3:console.log('hello')}",
+      "\t}}",
       "$4",
       ">",
-      "\t${5:Hello World!}",
+      "\t<Text>${5:Hello World!}</Text>",
       "</Pressable>",
       "$0"
     ],
@@ -249,7 +252,7 @@
   "Checkbox component: NativeBase v3": {
     "prefix": "nb-checkbox",
     "body": [
-      "<Checkbox value=\"${1:one}\" $2>",
+      "<Checkbox $1 value=\"${2:checkbox}\">",
       "\t${3:Checkbox}",
       "</Checkbox>",
       "$0"
@@ -260,12 +263,11 @@
   "Slider component: NativeBase v3": {
     "prefix": "nb-slider",
     "body": [
-      "<Slider defaultValue={${1:50}} $2>",
+      "<Slider $1 defaultValue={${2:50}}>",
       "\t<Slider.Track $3>",
-      "\t\t<Slider.FilledTrack $4 />",
+      "\t\t<Slider.FilledTrack $4/>",
       "\t</Slider.Track>",
-      "\t<Slider.Thumb $5 />",
-      "\t$6",
+      "\t<Slider.Thumb $5/>",
       "</Slider>",
       "$0"
     ],
@@ -275,7 +277,7 @@
   "TextArea component: NativeBase v3": {
     "prefix": "nb-text-area",
     "body": [
-      "<TextArea placeholder=\"${1:Text Area Placeholder}\"  $2/>",
+      "<TextArea placeholder=\"${1:Text Area Placeholder}\" $2 />",
       "$0"
     ],
     "description": "TextArea component: NativeBase v3"
@@ -284,7 +286,7 @@
   "Link component: NativeBase v3": {
     "prefix": "nb-link",
     "body": [
-      "<Link href=\"${1:https://nativebase.io}\" $2>${3:Default Link}</Link>",
+      "<Link $1 href=\"${2:https://nativebase.io}\">${3:Default Link}</Link>",
       "$0"
     ],
     "description": "Link component: NativeBase v3"
@@ -321,19 +323,24 @@
   //Divider
   "Divider component: NativeBase v3": {
     "prefix": "nb-divider",
-    "body": ["<Divider mt={${1:5}} $2/>", "$0"],
+    "body": ["<Divider $2/>", "$0"],
     "description": "Divider component: NativeBase v3"
   },
   //Progress
   "Progress component: NativeBase v3": {
     "prefix": "nb-progress",
-    "body": ["<Progress value={${1:45}} $2/>", "$0"],
+    "body": [
+      "<Box width=\"100%\">",
+      "\t<Progress value={${1:45}} $2 />",
+      "</Box>",
+      "$0"
+    ],
     "description": "Progress component: NativeBase v3"
   },
   //Spinner
   "Spinner component: NativeBase v3": {
     "prefix": "nb-spinner",
-    "body": ["<Spinner $1/>", "$0"],
+    "body": ["<Spinner size=\"${1|sm,lg|}\" $2 />", "$0"],
     "description": "Spinner component: NativeBase v3"
   },
   //Toast
@@ -370,7 +377,6 @@
       "\t$2",
       ">",
       "\t${3:SS}",
-      "\t $4",
       "</Avatar>",
       "$0"
     ],
@@ -379,14 +385,14 @@
   //AvatarBadge
   "AvatarBadge component: NativeBase v3": {
     "prefix": "nb-avatar-badge",
-    "body": ["<Avatar.Badge bg={\"${1:red.500}\"} $2 />", "$0"],
+    "body": ["<Avatar.Badge bg=\"${1:red.500}\" $2 />", "$0"],
     "description": "AvatarBadege component: NativeBase v3"
   },
   //Avatar group
   "AvatarGoup component: NativeBase v3": {
     "prefix": "nb-avatar-group",
     "body": [
-      "<Avatar.Group size=\"lg\" $1>",
+      "<Avatar.Group $1 size=\"lg\">",
       "\t<Avatar source={{uri:\"https://pbs.twimg.com/profile_images/1369921787568422915/hoyvrUpc_400x400.jpg\"}}>SS</Avatar>",
       "\t<Avatar source={{uri:\"https://pbs.twimg.com/profile_images/1309797238651060226/18cm6VhQ_400x400.jpg\"}}>SS</Avatar>",
       "\t<Avatar source={{uri:\"https://pbs.twimg.com/profile_images/1352844693151731713/HKO7cnlW_400x400.jpg\"}}>SS</Avatar>",
@@ -402,10 +408,12 @@
   "Modal component : NativeBase v3": {
     "prefix": "nb-modal",
     "body": [
-      "<Modal isOpen={${1:true}} onClose={()=>{",
+      "<Modal",
+      "\tisOpen={${1:true}}",
+      "\tonClose={()=>{",
       "\t${2:}",
-      "}}",
-      "$3",
+      "\t}}",
+      "\t$3",
       ">",
       "\t<Modal.Content>",
       "\t\t${4:<Modal.CloseButton/>}",
@@ -414,7 +422,7 @@
       "\t\t\t${8:Sit nulla est ex deserunt exercitation anim occaecat.}",
       "\t\t</Modal.Body>",
       "\t\t<Modal.Footer $9>",
-      "\t\t\t${10:<Button.Group variant=\"ghost\" space={2\\}>",
+      "\t\t\t${10:<Button.Group variant=\"ghost\" space=\"2\">",
       "\t\t\t\t<Button>LEARN MORE</Button>",
       "\t\t\t\t<Button>Accept</Button>",
       "\t\t\t</Button.Group>}",
@@ -439,10 +447,10 @@
       "\t\t<Popover.Header $8>",
       "\t\t\t${9:Confirmation}",
       "\t\t</Popover.Header>",
-      "\t\t<Popover.Body borderTopWidth={0} $10>",
+      "\t\t<Popover.Body borderTopWidth=\"0\" $10>",
       "\t\t\t${11:Are you sure you want to continue with your action?}",
       "\t\t</Popover.Body>",
-      "\t\t<Popover.Footer borderTopWidth={0} $12>",
+      "\t\t<Popover.Footer borderTopWidth=\"0\" $12>",
       "\t\t\t<Button.Group>",
       "\t\t\t\t<Button bg=\"red.500\" _pressed={{ bg: \"red.700\" }} _text={{ color: \"white\" }}>Yes</Button>",
       "\t\t\t\t<Button bg=\"gray.200\" _pressed={{ bg: \"gray.400\" }}>No</Button>",
@@ -482,16 +490,17 @@
   "Actionsheet component: NativeBase v3": {
     "prefix": "nb-actionsheet",
     "body": [
-      "<Actionsheet isOpen={${1:true}} onClose={()=>{",
-      "\t${2:}",
-      "}}",
-      "$3",
+      "<Actionsheet",
+      "\tisOpen={${1:true}}",
+      "\tonClose={()=>{",
+      "\t\t${2:}",
+      "\t}}",
+      "\t$3",
       ">",
       "\t<Actionsheet.Content>",
       "\t\t<Actionsheet.Item>Option 1</Actionsheet.Item>",
       "\t\t<Actionsheet.Item>Option 2</Actionsheet.Item>",
       "\t\t<Actionsheet.Item>Option 3</Actionsheet.Item>",
-      "\t\t$4",
       "\t</Actionsheet.Content>",
       "</Actionsheet>",
       "$0"
@@ -513,8 +522,8 @@
     "body": [
       "<Alert $1>",
       "\t<Alert.Icon $2/>",
-      "\t<Alert.Title $3>${4:Alert Title}</Alert.Title>",
-      "\t<Alert.Description $5>${6:Alert Description should be a brief about the Alert Message.}</Alert.Description>",
+      "\t<Text>Alert Title</Text>",
+      "\t<Text>Alert Description should be a brief about the Alert Message</Text>",
       "</Alert>",
       "$0"
     ],
@@ -581,10 +590,10 @@
   "Slide component: NativeBase v3": {
     "prefix": "nb-slide",
     "body": [
-      "<Slide in={${1:true}} placement=\"${2:bottom}\" $3>",
-      "<Box p={10} color=\"white\" bg=\"teal.400\" rounded=\"md\">",
-      "I am comming from Bottom",
-      "</Box>",
+      "<Slide in={${1:true}} placement=\"${2|top,bottom,right,left|}\">",
+      "\t<Box p=\"10\" color=\"white\" bg=\"teal.400\" rounded=\"md\">",
+      "\t\tI am comming from Bottom",
+      "\t</Box>",
       "</Slide>",
       "$0"
     ],
@@ -609,10 +618,10 @@
       "<PresenceTransition",
       "\tvisible={${1:true}}",
       "\tinitial={{opacity: 0}}",
-      "\tanimate={{opacity: 1,transition: {duration: 2000,},}}",
+      "\tanimate={{opacity: 1,transition: { duration: 2000 } }}",
       "$2",
       ">",
-      "\t${3:<Center p=\"40px\" bg=\"teal.500\">Fade</Center>}",
+      "\t${3:<Center p=\"20\" bg=\"teal.500\">Fade</Center>}",
       "$4",
       "</PresenceTransition>",
       "$0"
@@ -624,7 +633,7 @@
     "prefix": "nb-stagger",
     "body": [
       "    <Box>",
-      "      <Box alignItems=\"center\" minH={220} $1>",
+      "      <Box alignItems=\"center\" $1>",
       "        <Stagger",
       "          visible={${2:true}}",
       "          initial={{",
@@ -659,25 +668,25 @@
       "          }}",
       "        >",
       "          <IconButton",
-      "            mb={4}",
+      "            mb=\"4\"",
       "            variant=\"solid\"",
       "            rounded=\"full\"",
       "            icon={<MaterialCommunityIcons size={24} name=\"share\" />}",
       "          />",
       "          <IconButton",
-      "            mb={4}",
+      "            mb=\"4\"",
       "            variant=\"solid\"",
       "            rounded=\"full\"",
       "            icon={<MaterialCommunityIcons size={24} name=\"heart\" />}",
       "          />",
       "          <IconButton",
-      "            mb={4}",
+      "            mb=\"4\"",
       "            variant=\"solid\"",
       "            rounded=\"full\"",
       "            icon={<MaterialCommunityIcons size={24} name=\"library\" />}",
       "          />",
       "          <IconButton",
-      "            mb={4}",
+      "            mb=\"4\"",
       "            variant=\"solid\"",
       "            rounded=\"full\"",
       "            icon={<MaterialCommunityIcons size={24} name=\"lighthouse\" />}",
@@ -706,7 +715,7 @@
     "body": [
       "<AlertDialog",
       "\tisOpen={${1:true}}",
-      "\tmotionPreset={\"fade\"}",
+      "\tmotionPreset=\"fade\"",
       "\t$2",
       ">",
       "\t<AlertDialog.Content>",
@@ -723,7 +732,7 @@
       ">",
       "\t\t\t\tCancel",
       "\t\t\t</Button>",
-      "\t\t\t<Button colorScheme=\"red\" ml={3} onPress={()=>{",
+      "\t\t\t<Button colorScheme=\"red\" ml=\"3\" onPress={()=>{",
       "\t\t\t\t${4:}",
       "\t\t\t}}",
       ">",
@@ -780,13 +789,13 @@
   "FlatList component: NativeBase v3": {
     "prefix": "nb-flat-list",
     "body": [
-      "<FlatList>",
+      "<FlatList",
       "\tdata={${1:data}}",
       "\trenderItem={($2) => (",
       "\t\t$3",
       "\t)}",
       "\t$4",
-      "</FlatList>",
+      "/>",
       "$0"
     ],
     "description": "FlatList component: NativeBase v3"
@@ -794,7 +803,7 @@
   "SectionList component: NativeBase v3": {
     "prefix": "nb-section-list",
     "body": [
-      "<FlatList>",
+      "<SectionList",
       "\tsections={${1:data}}",
       "\tkeyExtractor={${2}}",
       "\trenderItem={($3) => (",
@@ -804,7 +813,7 @@
       "\t\t$6",
       "\t)}",
       "\t$7",
-      "</FlatList>",
+      "/>",
       "$0"
     ],
     "description": "SectionList component: NativeBase v3"
