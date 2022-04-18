@@ -2,7 +2,7 @@
 
 ## Introduction
 
-NativeBase VS Code Extensions are specifically designed to quicken your development process using [NativeBase 3.0](https://alpha.nativebase.io/?utm_source=RnD&utm_medium=Snippet_README&utm_campaign=NativeBase_3).
+NativeBase VS Code Extensions are specifically designed to quicken your development process using [NativeBase 3.0](https://nativebase.io/?utm_source=RnD&utm_medium=Snippet_README&utm_campaign=NativeBase_3).
 
 ## Snippets
 
